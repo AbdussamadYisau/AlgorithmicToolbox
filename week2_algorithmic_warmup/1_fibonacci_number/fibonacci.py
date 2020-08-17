@@ -1,5 +1,7 @@
 # Uses python3
 
+import time
+startTime = time.time()
 
 # Naive Solution
 # def calc_fib(n):
@@ -24,3 +26,5 @@ def calc_fib(n):
 
 n = int(input())
 print(calc_fib(n))
+
+print("--- This piece of code runs in ---" % (time.time() - startTime))
