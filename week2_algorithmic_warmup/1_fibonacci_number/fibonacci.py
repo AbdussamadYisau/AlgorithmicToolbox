@@ -13,12 +13,19 @@ startTime = time.time()
 # Efficient solution
 
 fibArray = [0, 1]
+
+'''
+fibArray[i-1] = 0 -> previous
+fibArray[i] = 1 -> current
+
+'''
 def calc_fib(n):
 
     if n <= 1:
         return n
 
     for i in range(n):
+        
         fibArray[i-1], fibArray[i] = fibArray[i], fibArray[i-1] + fibArray[i] 
         fibArray.append(fibArray[i])
 
@@ -27,4 +34,4 @@ def calc_fib(n):
 n = int(input())
 print(calc_fib(n))
 
-print("--- This piece of code runs in ---" % (time.time() - startTime))
+print("--- %s seconds ---" % (time.time() - startTime))
